@@ -301,3 +301,15 @@ For example, consider the following template:
 Imagine that the `dirWithHostBinding` directive and the `comp-with-host-binding` component both have a `[style.width]` host binding.
 In that case, if `dirWithHostBinding` sets its binding to `undefined`, the `width` property will fall back to the value of the `comp-with-host-binding` host binding.
 However, if `dirWithHostBinding` sets its binding to `null`, the `width` property will be removed entirely.
+
+
+### Create custom attributes
+
+It is possible to create a custom attribute on a child component so that a parent can provide it with a value. The [Attribute](api/core/Attribute) decorator is defined in the component's `constructor` and accepts one argument, which is the exported name. 
+
+
+<code-example path="attribute-binding/src/app/attribute-decorator-child.component.ts" header="attribute-decorator-child.component.ts"></code-example>
+
+<code-example path="attribute-binding/src/app/app.component.html" region="attribute-binding" header="src/app/app.component.html"></code-example>
+
+The result of the `app.component.html` will be **Hello world**
